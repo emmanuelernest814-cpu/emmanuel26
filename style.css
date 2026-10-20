@@ -164,3 +164,204 @@ button { font: inherit; background: none; border: 0; cursor: pointer; color: inh
 .testimonial-author strong { font-size: 16px; color: #4a4a55; }
 .testimonial-author span { font-size: 14px; color: var(--muted);
 }
+developer { background: var(--cream); text-align: center; padding: 24px 0 96px; border-radius: 0; margin: 0; }
+.developer .container { display: flex; flex-direction: column; align-items: center; }
+.developer-icon { margin-bottom: 20px; }
+.developer h2 { font-family: 'Caveat', cursive; font-size: clamp(38px, 5vw, 56px); font-weight: 600; color: #5b5360; line-height: 1.1; margin-bottom: 14px; }
+.developer p { color: #7b7b88; font-size: 19px; max-width: 760px; margin-bottom: 28px; }
+.audience { display: flex; align-items: center; gap: 12px; margin-top: 44px; font-size: 14px; color: var(--muted); flex-wrap: wrap; justify-content: center; }
+.avatars { display: inline-flex; }
+.avatars i {
+    width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+    font-style: normal; font-size: 17px; border: 2px solid var(--cream); margin-left: -8px;
+}
+.avatars i:first-child { margin-left: 0; }
+
+/* ---------- Sections ---------- */
+.section { padding: 88px 0; }
+.section-title { font-size: clamp(30px, 4vw, 44px); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 40px; }
+
+/* ---------- Comparison table ---------- */
+.compare-table { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: #fff; }
+.table-scroll { overflow-x: auto; }
+.table-heading, .table-row, .table-footer {
+    display: grid; grid-template-columns: 0.8fr 1.3fr 1.3fr; min-width: 680px;
+}
+.table-heading { background: var(--purple-soft); border-bottom: 1px solid var(--line); }
+.table-heading > div, .table-row > div { padding: 20px 24px; font-size: 15px; }
+.table-heading h3 { font-size: 17px; margin-bottom: 4px; }
+.table-subtitle { font-size: 13px; color: var(--muted); line-height: 1.4; }
+.table-row { border-bottom: 1px solid var(--line); }
+.table-row > div { color: var(--text); }
+.table-row > div:first-child { font-weight: 600; color: var(--ink); }
+.table-row:hover { background: var(--bg-alt); }
+.table-footer { background: var(--purple-soft); }
+.table-cta { padding: 24px; display: flex; align-items: center; gap: 20px; }
+.table-note { padding: 24px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* ---------- Feature sections ---------- */
+.feature-section { padding: 88px 0; }
+.feature-section.alt { background: var(--bg-alt); }
+.feature-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+.feature-section.reverse .feature-text { order: 2; }
+.feature-text h2 { font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 20px; }
+.feature-text p:not(.eyebrow) { color: var(--text); font-size: 17px; margin-bottom: 14px; max-width: 480px; }
+
+/* ---------- Features grid ---------- */
+.features { background: var(--bg-alt); text-align: center; }
+.feature-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    text-align: left; margin: 48px 0 40px;
+}
+.feature-card {
+    padding: 32px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    transition: box-shadow .25s, transform .25s, border-color .25s;
+}
+.feature-card:hover { box-shadow: 0 12px 32px rgba(113,75,103,.12); transform: translateY(-3px); border-color: #d9c8d4; }
+.feature-card h3 { font-size: 18px; margin-bottom: 10px; }
+.feature-card p { color: var(--text); font-size: 15px; }
+
+/* ---------- Final CTA ---------- */
+.final-section { text-align: center; padding: 104px 0; background: var(--purple); color: #fff; }
+.final-section .eyebrow { color: #e6cfe0; }
+.final-section h2 { font-size: clamp(30px, 4.5vw, 48px); letter-spacing: -0.03em; margin: 0 0 32px; }
+.final-section .btn { background: #fff; color: var(--purple); border-color: #fff; }
+.final-section .btn:hover { background: var(--purple-soft); }
+.trial-note { margin-top: 16px; color: #e6cfe0; font-size: 14px; }
+
+/* ---------- Footer ---------- */
+footer { padding: 56px 0; background: #22181f; color: #fff; text-align: center; }
+footer .logo { color: #fff; display: inline-block; margin-bottom: 8px; }
+footer p { color: #b9aab4; font-size: 14px; }
+.footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 32px; margin-top: 24px; }
+.footer-links a { color: #d9ccd4; font-size: 14px; transition: color .2s; }
+.footer-links a:hover { color: #fff; }
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1000px) {
+    .hero { padding: 56px 0 64px; }
+    .hero-inner, .feature-inner { gap: 40px; }
+    .mega-grid { gap: 0 28px; }
+    .feature-grid { grid-template-columns: repeat(2, 1fr); }
+    .section, .feature-section { padding: 64px 0; }
+    .nav-links { gap: 20px; }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 800px) {
+    .container { padding: 0 20px; }
+    .navbar { height: 64px; }
+    .nav-burger { display: block; }
+    .nav-collapse {
+        display: none; position: absolute; top: 64px; left: 0; right: 0;
+        flex-direction: column; align-items: stretch; gap: 16px;
+        padding: 16px 20px 24px; background: #fff; border-bottom: 1px solid var(--line);
+        max-height: calc(100vh - 64px); overflow-y: auto;
+    }
+    .nav-toggle:checked ~ .nav-collapse { display: flex; }
+    .nav-links { flex-direction: column; align-items: stretch; gap: 4px; margin: 0; }
+    .nav-links > a { padding: 10px 0; }
+    .nav-divider { display: none; }
+    .dropdown-btn { height: auto; padding: 10px 0; }
+    .mega { position: static; box-shadow: none; border: 0; padding: 8px 0 0; }
+    .mega .container { padding: 0; }
+    .mega-grid { grid-template-columns: 1fr 1fr; gap: 0 20px; }
+    .mega-footer { flex-direction: column; gap: 10px; align-items: flex-start; }
+    .nav-buttons { justify-content: space-between; }
+
+    .hero-inner, .feature-inner { grid-template-columns: 1fr; }
+    .hero-media { justify-self: center; max-width: 420px; }
+    .hero-desc { font-size: 17px; }
+    .feature-section.reverse .feature-text { order: 0; }
+
+    .testimonial { padding: 8px 0 48px; }
+    .quote-mark { margin-left: 16px; font-size: 110px; height: 52px; }
+    .testimonial-card { grid-template-columns: 1fr; gap: 24px; padding: 32px 24px; }
+    .testimonial-author { text-align: left; }
+    .developer { padding-bottom: 64px; }
+    .developer p { font-size: 17px; }
+
+    .feature-grid { grid-template-columns: 1fr; gap: 16px; }
+    .feature-card { padding: 24px; }
+    .final-section { padding: 72px 0; }
+    .footer-links { gap: 18px; }
+}
+
+@media (max-width: 480px) {
+    .mega-grid { grid-template-columns: 1fr; }
+}<!-- Property developer -->
+        <section class="developer" id="developer">
+            <div class="container">
+                <svg class="developer-icon" width="64" height="64" viewBox="0 0 64 64" aria-hidden="true">
+                    <path d="M8 30l22-12 22 12v24H8z" fill="#4fc3c0"/>
+                    <path d="M30 18l24-14 8 8v42H52V30z" fill="#f6b8c9" opacity=".9"/>
+                    <path d="M8 30l22-12v36H8z" fill="#3aa9a8"/>
+                </svg>
+                <h2>Are you a Property developer?</h2>
+                <p>Discover our solution to manage complex infrastructure and large-scale projects.</p>
+                <a href="#compare" class="btn btn-outline">Compare →</a>
+                <div class="audience">
+                    <span class="avatars" aria-hidden="true">
+                        <i style="background:#f5c97a">👷</i><i style="background:#9fd6c9">👩</i><i style="background:#c9b8e8">🧑</i>
+                    </span>
+                    <span>Designed for Project Developers, Civil Engineers, and Tier-1 Contractors</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison -->
+        <section class="compare section" id="compare">
+            <div class="container">
+                <p class="eyebrow">Find your solution</p>
+                <h2 class="section-title">Compare</h2>
+
+                <div class="compare-table">
+                    <div class="table-scroll">
+                        <div class="table-heading">
+                            <div></div>
+                            <div>
+                                <h3>General contractor</h3>
+                                <p class="table-subtitle">Essential trades and residential projects</p>
+                            </div>
+                            <div>
+                                <h3>Property developer</h3>
+                                <p class="table-subtitle">Complex infrastructure and large-scale projects</p>
+                            </div>
+                        </div>
+
+                        <div class="table-row">
+                            <div>Project structure</div>
+                            <div>Flat task lists</div>
+                            <div>Multi-level automated WBS</div>
+                        </div>
+                        <div class="table-row">
+                            <div>Estimating</div>
+                            <div>Fixed price and hourly</div>
+                            <div>Technical work item ratios</div>
+                        </div>
+                        <div class="table-row">
+                            <div>Procurement</div>
+                            <div>Manual purchasing</div>
+                            <div>Automated and phased shopping list</div>
+                        </div>
+                        <div class="table-row">
+                            <div>Client billing</div>
+                            <div>Milestones and manual</div>
+                            <div>Cumulative progress</div>
+                        </div>
+
+                        <div class="table-footer">
+                            <div></div>
+                            <div class="table-cta">
+                                <a href="#footer" class="btn">Start now</a>
+                                <a href="#features" class="text-link">Read more</a>
+                            </div>
+                            <div class="table-note">
+                                Developer includes the full General contractor suite, plus advanced
+                                tools for high-complexity and large-scale projects.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
